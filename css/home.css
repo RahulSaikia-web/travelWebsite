@@ -1,0 +1,285 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body with Background Image */
+body {
+    font-family: 'Roboto', 'Arial', sans-serif; /* Modern font stack */
+    background-image: url('../images/home.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #333;
+    min-height: 100vh;
+}
+
+/* Navigation Bar */
+.navbar {
+    background-color: #333;
+    padding: 15px 0;
+}
+
+.navbar ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.navbar ul li {
+    display: inline;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    background-color: #555;
+    border-radius: 5px;
+}
+
+/* Places Section */
+.places-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.92); /* Slightly more opaque for better contrast */
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); /* Subtle shadow for depth */
+}
+
+.places-container h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 36px;
+    font-weight: 700;
+    color: #2c3e50;
+    letter-spacing: 0.5px;
+}
+
+/* Places Grid */
+.places-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* Slightly wider cards */
+    gap: 25px;
+    justify-items: center; /* Center the cards in the grid */
+}
+
+/* Place Card */
+.place-card {
+    background-color: white;
+    border: 1px solid #e0e0e0; /* Subtle border for definition */
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08); /* Softer, larger shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative; /* For potential overlays or badges */
+    width: 100%;
+    max-width: 350px; /* Set a fixed maximum width for consistency */
+}
+
+.place-card:hover {
+    transform: translateY(-8px); /* Slightly larger lift on hover */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+}
+
+.place-card img {
+    width: 100%;
+    height: 220px; /* Slightly taller image for better visuals */
+    object-fit: cover;
+    border-bottom: 1px solid #e0e0e0; /* Subtle separator */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Image shadow */
+}
+
+.place-card h3 {
+    font-size: 26px;
+    font-weight: 600;
+    margin: 20px 20px 10px;
+    color: #2c3e50;
+    line-height: 1.3;
+}
+
+.place-card .cost {
+    font-size: 20px;
+    font-weight: 700;
+    color: #e74c3c;
+    margin: 0 20px 10px;
+    display: block;
+}
+
+.place-card .description {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #666;
+    margin: 0 20px 20px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Limit to 3 lines */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.place-card .booking-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 85%;
+    margin: 0 auto 20px;
+    padding: 12px 20px;
+    background: linear-gradient(90deg, #3498db, #2980b9); /* Gradient background */
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.place-card .booking-btn:hover {
+    background: linear-gradient(90deg, #2980b9, #1f6a9a); /* Darker gradient on hover */
+    transform: scale(1.05); /* Slight scale effect */
+}
+
+.place-card .booking-btn::after {
+    content: '\2192'; /* Unicode right arrow */
+    margin-left: 8px;
+    font-size: 18px;
+    transition: margin-left 0.3s ease;
+}
+
+.place-card .booking-btn:hover::after {
+    margin-left: 12px; /* Arrow moves slightly on hover */
+}
+
+/* Login/Signup Form Styles (for consistency with login.php and signup.php) */
+.login-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.login-container h2 {
+    margin-bottom: 20px;
+    font-size: 28px;
+    color: #2c3e50;
+}
+
+.login-container input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.login-btn, .signup-btn {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.login-btn {
+    background-color: #3498db;
+    color: white;
+}
+
+.login-btn:hover {
+    background-color: #2980b9;
+}
+
+.signup-btn {
+    background-color: #2ecc71;
+    color: white;
+}
+
+.signup-btn:hover {
+    background-color: #27ae60;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .places-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Smaller cards on tablets */
+        gap: 20px;
+    }
+
+    .place-card {
+        max-width: 320px; /* Slightly smaller for tablets */
+    }
+
+    .place-card h3 {
+        font-size: 24px;
+        margin: 15px 15px 8px;
+    }
+
+    .place-card .cost {
+        font-size: 18px;
+        margin: 0 15px 8px;
+    }
+
+    .place-card .description {
+        font-size: 14px;
+        margin: 0 15px 15px;
+    }
+
+    .place-card .booking-btn {
+        width: 90%;
+        padding: 10px 15px;
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 600px) {
+    .navbar ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .navbar ul li {
+        margin: 10px 0;
+    }
+
+    .places-container {
+        margin: 20px;
+        padding: 15px;
+    }
+
+    .places-container h2 {
+        font-size: 28px;
+        margin-bottom: 30px;
+    }
+
+    .places-grid {
+        grid-template-columns: 1fr; /* Single column on mobile */
+        gap: 15px;
+    }
+
+    .place-card {
+        margin: 0 auto;
+        max-width: 300px; /* Smaller for mobile */
+    }
+
+    .place-card img {
+        height: 200px;
+    }
+}
